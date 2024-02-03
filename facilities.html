@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="facilities.css">
+    <title>LOCAL FACILITIES</title>
+</head>
+
+<body>
+
+       <!-- nav bar starts -->
+
+       <nav>
+        <nav>
+            <ul class="menu">
+                <li><a  href="index.html">HOME</a></li>
+                <li><a  href="about.html">ABOUT</a></li>
+                <li><a  href="history.html">HISTORY</a></li>
+                <li class="dropdown">
+                  <a href="place.html" class="dropbtn">PLACE<i class="fas fa-caret-down"></i></a>
+                  <div class="dropdown-content">
+                    <a class="active" href="facilities.html">LOCAL FACILITIES</a>
+                  </div>
+                  <li><a  href="accommodation.html">ACCOMMODATION</a></li>
+                  <li><a  href="gallery.html">GALLERY</a></li>
+                  <li><a  href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <!-- nav bar closed -->
+
+    <!-- content start-->
+
+    <div class="gallery-container">
+
+        <div class="gallery-item" data-index="1"><img src="picture/picture9.png"  alt=""></div>
+        <div class="gallery-item" data-index="2"><img src="picture/picture10.png" alt=""></div>
+        <div class="gallery-item" data-index="3"><img src="picture/picture11.png" alt=""></div>
+        <div class="gallery-item" data-index="4"><img src="picture/picture12.png" alt=""></div>
+        <div class="gallery-item" data-index="5"><img src="picture/picture13.png" alt=""></div>
+        <div class="gallery-item" data-index="6"><img src="picture/picture14.png" alt=""></div>
+        <div class="gallery-item" data-index="7"><img src="picture/picture15.png" alt=""></div>
+        <div class="gallery-item" data-index="8"><img src="picture/picture16.png" alt=""></div>
+        <div class="gallery-item" data-index="9"><img src="picture/picture17.png" alt=""></div>
+
+    </div>
+
+    <!-- content close-->
+
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">BATANGKALICOMMUNITY</span></p>
+        </div>
+    </footer>
+
+    <!--javascript-->
+
+    <script>
+        const galleryItem = document.getElementsByClassName("gallery-item");
+        // create element for lightbox
+        const lightBoxContainer = document.createElement("div");
+        // for basic area
+        const lightBoxContent = document.createElement("div");
+        // for images
+        const lightBoxImg = document.createElement("img");
+        // for prev button to change images
+        const lightBoxPrev = document.createElement("div");
+        // for next button
+        const lightBoxNext = document.createElement("div");
+
+        //create classlist
+
+        lightBoxContainer.classList.add('lightbox');
+        lightBoxContent.classList.add('lightbox-content');
+        lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+        lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+        lightBoxContainer.appendChild(lightBoxContent);
+        lightBoxContent.appendChild(lightBoxImg);
+        lightBoxContent.appendChild(lightBoxPrev);
+        lightBoxContent.appendChild(lightBoxNext);
+        document.body.appendChild(lightBoxContainer);
+
+        let index = 1;
+
+        // create function
+
+        function showLightBox(n) {
+            if (n > galleryItem.length) {
+                index = 1;
+            } else if (n < 1) {
+                index = galleryItem.length;
+            }
+
+            let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
+            lightBoxImg.setAttribute("src", imageLocation);
+        }
+
+        function currentImage (){
+            lightBoxContainer.style.display="block";
+
+            let imageIndex = parseInt(this.getAttribute("data-index"));
+            showLightBox (index = imageIndex);
+        }
+
+        for (let i = 0; i<galleryItem.length; i++){
+            galleryItem[i].addEventListener("click", currentImage);
+        }
+
+        function sliderImage(n){
+            showLightBox(Index += n);
+        }
+
+        function prevImage(){
+            sliderImage(-1);
+        }
+        function nextImage(){
+            sliderImage(1);
+        }
+
+        lightBoxPrev.addEventListener("click", prevImage);
+        lightBoxNext.addEventListener("click", nextImage);
+
+        //close lightbox
+
+        function closeLightBox(){
+            if(this === event.target){
+                lightBoxContainer.style.display = "none";
+            }
+        }
+
+        lightBoxContainer.addEventListener("click", closeLightBox);
+
+    </script>
+    
+</body>
+</html>

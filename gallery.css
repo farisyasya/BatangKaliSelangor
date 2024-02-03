@@ -1,0 +1,232 @@
+*{ 
+    font-family:'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color:#607D3B;
+    padding: 10px;
+    font-size:large;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+  
+.menu li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.menu li a {
+    color: #f1f9f8;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu li a:hover{
+    background-color: #99d4b2;
+    color: #ffffff;
+}
+.menu li a.active{
+    background-color:#257536;
+    color: #ffffff;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #55a175;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+
+.dropdown-content a{
+    color: #99BBD4;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.topic h1{
+    text-align: center;
+    color: #32612d;
+    font-family: Georgia, serif;
+}
+
+.in-gallery{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #32612d;
+    background-size: contain;
+}
+
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+/* css for manual navigation*/
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #99edc3;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background:#99edc3;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -120%;
+}
+
+#radio8:checked ~ .first{
+    margin-left: -140%;
+}
+
+/* css for manual navigation*/
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid #99edc3;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #99edc3;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #99edc3;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #99edc3;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #99edc3;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background: #99edc3;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background: #99edc3;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7{
+    background: #99edc3;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8{
+    background: #99edc3;
+}
+
+/* Add this CSS for the footer */
+
+.footerBottom{
+    background-color: #597d35;
+    padding: 20px;
+    text-align: center;
+}
+  
+  .footerBottom p{
+    color: white;
+}
+  
+  .designer{
+    color: #ffffff;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

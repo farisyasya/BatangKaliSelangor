@@ -1,0 +1,154 @@
+body{ 
+    font-family:'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color:#607D3B;
+    padding: 10px;
+    font-size:large;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+  
+.menu li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.menu li a {
+    color: #f1f9f8;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu li a:hover{
+    background-color: #99d4b2;
+    color: #ffffff;
+}
+.menu li a.active{
+    background-color:#257536;
+    color: #ffffff;}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #55a175;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+
+.dropdown-content a{
+    color: #99BBD4;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(picture/picture4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 80px;
+    margin-left: 10%;
+
+}
+
+p{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 10%;
+}
+
+button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #ffffff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin: 30px;
+    margin-left: 10%;
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 20px 25px;
+    background-image: url(picture/picture3.png);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1{
+    background-image: url(picture/picture5.png);
+}
+
+.card2{
+    background-image: url(picture/picture6.png)
+}
+
+.card3{
+    background-image: url(picture/picture7.png);
+}
+
+.card4{
+    background-image: url(picture/picture8.png);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.footerBottom{
+    background-color: #607D3B;
+    padding: 5px;
+    text-align: center;
+}
+  
+  .footerBottom p{
+    color: white;
+}
+  
+  .designer{
+    color: #ffffff;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
